@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Wordle PPY</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<header>
+
+    <img src="/assets/actualizar-flecha.png" class="actualizar" id="ocultar" onclick="toggleTabla()"></img>
+    <img src="/assets/informacion.png" class="icon"></img>
+
+
+    <!-- Mensaje emergente -->
+    <div class="message">Las reglas son muy simples: debes escribir una palabra de 5 letras y otro jugador debe adivinar
+        cual es la palabra. Para comenzar, simplemente escriba cualquier palabra de 5 letras en el cuadro de texto,
+        luego precione el boton intentar y el otro jugador tendrá 6 intentos para adivinar la palaba. Si la letra se
+        adivina correctamente y está en el lugar correcto, se marcará en verde, si la letra está en la palabra, pero en
+        el lugar equivocado, en amarillo, y si la letra no está en la palabra, permanecerá gris. ¿Puedes adivinar la
+        palabra oculta en 6 intentos?</div>
+</header>
+
+<body>
+    <h1>Wordle PPY</h1>
+    <div class="tabla">
+    </div>
+    <div class="inicio" id="inicio">
+        <h4 id="h4">Ingrese la palabra para iniciar el juego</h4>
+        <input type="text" id="guess-input" maxlength="5" placeholder="Ingresa una palabra de 5 letras">
+        <button id="guess-button">Intentar</button>
+        <div id="grid"></div>
+        <p id="guesses"></p>
+    </div>
+    <main class="main-container">
+        <div class="row" id="1">
+        </div>
+    </main>
+    <div id="keyboard"></div>
+    <div class="result">
+    </div>
+</body>
+<footer>
+
+    <hr>
+    <p id="pie">Wordle PY by Programando PY</p>
+
+</footer>
+
+</html>
